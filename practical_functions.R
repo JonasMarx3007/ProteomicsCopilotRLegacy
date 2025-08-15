@@ -20,7 +20,7 @@ xy_intensity_plot <- function(data, meta, sample1, sample2, workflow = "Protein"
   cor_text <- paste0("Pearson r = ", round(cor_val, 3))
   
   p <- ggplot(plot_data, aes(x = !!sym(sample1), y = !!sym(sample2))) +
-    geom_point(color = "blue", alpha = 0.6) +
+    geom_point(color = "green", alpha = 0.6) +
     geom_smooth(method = "lm", se = FALSE, color = "red") +
     labs(
       x = paste(sample1, "Intensity"),
